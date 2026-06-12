@@ -1,0 +1,40 @@
+# Render Blueprint — deploys the API (NestJS: REST + GraphQL + socket.io on one port).
+# The web app deploys to Vercel separately (see DEPLOY.md / apps/web/vercel.json).
+#
+# First deploy: create a Blueprint instance from this repo, then fill in the
+# sync:false env vars in the Render dashboard. Migrations run on every boot
+# (idempotent); the real-2026 dataset auto-seeds only when the DB is empty.
+services:
+  - type: web
+    name: fifa-api
+    runtime: node
+    plan: starter # free works too, but sleeps after idle and kills long Monte Carlo jobs
+    buildCommand: npm ci && npm run build:packages && npm run build:api
+    startCommand: node scripts/start-prod.mjs
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.16.0
+      - key: NODE_ENV
+        value: production
+      # Postgres connection string (Supabase or Render Postgres). REQUIRED for
+      # persistence — without it the API uses embedded PGlite on ephemeral disk.
+      - key: DATABASE_URL
+        sync: false
+      # Comma-separated allowed browser origins, e.g. https://your-app.vercel.app
+      - key: WEB_ORIGINS
+        sync: false
+      # Supabase auth (end-user identity provider)
+      - key: SUPABASE_URL
+        sync: false
+      # Comma-separated emails promoted to admin on first Supabase sign-in
+      - key: ADMIN_EMAILS
+        sync: false
+      # Optional: PEM contents for the local RS256 JWT keypair (ops/admin logins).
+      # If unset, a fresh keypair is generated on every deploy, logging out
+      # local-auth sessions. Generate once with:
+      #   node -e "const{generateKeyPairSync}=require('crypto');const k=generateKeyPairSync('rsa',{modulusLength:2048,privateKeyEncoding:{type:'pkcs8',format:'pem'},publicKeyEncoding:{type:'spki',format:'pem'}});console.log(k.privateKey);console.log(k.publicKey)"
+      - key: JWT_PRIVATE_KEY
+        sync: false
+      - key: JWT_PUBLIC_KEY
+        sync: false

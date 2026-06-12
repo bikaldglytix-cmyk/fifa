@@ -31,7 +31,9 @@ export async function runMonteCarlo(
   const scorerTotals = new Map<number, { name: string; team: string; goals: number; boots: number }>();
   let sample: ReturnType<typeof runTournament> | null = null;
 
-  const yieldEvery = opts.yieldEvery ?? 50;
+  // each run is a full 104-match tournament (~tens of ms, slower on small
+  // cloud CPUs) — yield after every run or concurrent requests stall
+  const yieldEvery = opts.yieldEvery ?? 1;
 
   for (let i = 0; i < runs; i++) {
     const run = runTournament(inputs, { seed: deriveSeed(opts.seed, i) });

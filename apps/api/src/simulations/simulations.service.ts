@@ -135,7 +135,11 @@ export class SimulationsService {
 
     const prediction = predictMatch(inputs);
 
-    // aggregate N runs
+    // aggregate N runs — yield to the event loop periodically so large runs
+    // can't starve DB connection handshakes and other requests (a starved
+    // loop makes Supabase's pooler count timed-out auths as failures and
+    // trip its circuit breaker, taking the whole API down)
+    const yieldEvery = 500;
     let homeWins = 0;
     let draws = 0;
     let awayWins = 0;
@@ -155,6 +159,7 @@ export class SimulationsService {
       goalsA += r.awayScore;
       const k = `${r.homeScore}-${r.awayScore}`;
       scoreCounts.set(k, (scoreCounts.get(k) ?? 0) + 1);
+      if ((i + 1) % yieldEvery === 0) await new Promise((r) => setImmediate(r));
     }
 
     // one detailed showcase run
