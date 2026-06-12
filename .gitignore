@@ -1,0 +1,39 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+.next/
+out/
+build/
+coverage/
+*.tsbuildinfo
+
+# runtime data
+.pgdata/
+.keys/
+*.log
+.env
+.env.local
+.env.*.local
+
+# editor/os
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# expo / mobile
+apps/mobile/.expo/
+apps/mobile/android/
+apps/mobile/ios/
+
+# terraform
+infra/terraform/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+
+# research raw downloads (regenerable via research/download + parse)
+research/raw/

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#0A0E17"/>
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#00BFFF" stroke-width="3"/>
+  <polygon points="32,20 36.7,23.4 34.9,28.9 29.1,28.9 27.3,23.4" fill="#00BFFF"/>
+  <polygon points="32,44 27.3,40.6 29.1,35.1 34.9,35.1 36.7,40.6" fill="#FFD700"/>
+  <text x="32" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="9" font-weight="700" fill="#FFD700">2026</text>
+</svg>

@@ -1,0 +1,40 @@
+{
+  "year": 2026,
+  "name": "FIFA World Cup 2026",
+  "hostCountries": [
+    "Canada",
+    "Mexico",
+    "United States"
+  ],
+  "startDate": "2026-06-11",
+  "endDate": "2026-07-19",
+  "teamsCount": 48,
+  "groupsCount": 12,
+  "format": {
+    "groupStage": {
+      "groups": 12,
+      "teamsPerGroup": 4,
+      "advance": "top2 + 8 best third-placed"
+    },
+    "knockout": [
+      "round32",
+      "round16",
+      "quarterfinal",
+      "semifinal",
+      "third_place",
+      "final"
+    ]
+  },
+  "sources": {
+    "wikipedia": [
+      "2026 FIFA World Cup",
+      "Group A–L pages",
+      "knockout stage",
+      "squads"
+    ],
+    "fifaRanking": "1 April 2026 release",
+    "elo": "eloratings.net (retrieved 2026-06-10)",
+    "history": "martj42/international_results (results through 2026-06-10)"
+  },
+  "retrievedAt": "2026-06-10T14:49:23.117Z"
+}

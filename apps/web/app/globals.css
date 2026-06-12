@@ -1,0 +1,158 @@
+@import 'tailwindcss';
+
+/* FIFA 2026 design tokens — "Morning Light": clean, optimistic, warm.
+   Reference: optimistic-ui.html (warm off-white, white cards, orange accent). */
+@theme {
+  --color-primary: #f97316;
+  --color-primary-dark: #ea580c;
+  --color-secondary: #ca8a04;
+  --color-success: #16a34a;
+  --color-danger: #dc2626;
+  --color-warning: #d97706;
+  --color-info: #0284c7;
+
+  --color-bg: #fafaf9;
+  --color-card: #ffffff;
+  --color-elevated: #f5f5f4;
+  --color-line: #e7e5e4;
+  --color-txt: #27272a;
+  --color-muted: #71717a;
+
+  --color-stage-group: #16a34a;
+  --color-stage-r32: #0284c7;
+  --color-stage-r16: #9333ea;
+  --color-stage-qf: #ea580c;
+  --color-stage-sf: #dc2626;
+  --color-stage-final: #be123c;
+  --color-stage-champion: #ca8a04;
+
+  /* Outfit loads at runtime via <link> (build-time font fetching fails on
+     this network); the system stack is the offline fallback */
+  --font-sans: 'Outfit', 'Inter', 'Segoe UI', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: 'Roboto Mono', 'Cascadia Mono', Consolas, ui-monospace, monospace;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-txt);
+  font-family: var(--font-sans);
+  letter-spacing: 0.01em;
+}
+
+/* a single whisper of morning warmth — clean, zero layout cost */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: radial-gradient(1000px 420px at 50% -12%, rgba(251, 146, 60, 0.07), transparent 70%);
+}
+
+/* the previous premium dark palette stays available as an opt-in */
+html[data-theme='dark'] {
+  --color-bg: #05070d;
+  --color-card: #101524;
+  --color-elevated: #1b2236;
+  --color-line: #273150;
+  --color-txt: #f2f6ff;
+  --color-muted: #8e9ab5;
+  --color-primary: #22c9ff;
+  --color-primary-dark: #0099cc;
+  --color-secondary: #ffd166;
+  --color-danger: #ff4d5e;
+  --color-info: #4f8dff;
+  color-scheme: dark;
+}
+html[data-theme='dark'] body::before {
+  display: none;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-primary) 25%, transparent);
+}
+
+/* slim scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line) transparent;
+}
+
+/* warm display text for hero/section headings */
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-txt) 15%, var(--color-primary-dark) 60%, var(--color-primary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* primary action — solid, warm, gently springy (mockup button) */
+.btn-gradient {
+  background: #fb923c;
+  color: #ffffff;
+  transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 20px -8px rgba(251, 146, 60, 0.55);
+}
+.btn-gradient:hover:not(:disabled) {
+  background: var(--color-primary);
+  transform: scale(1.02);
+}
+.btn-gradient:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+/* clean card surface: white, hairline border, soft warm shadow (mockup card) */
+.glass {
+  background: var(--color-card);
+  box-shadow: 0 10px 40px -12px rgba(251, 146, 60, 0.13);
+  transition: box-shadow 0.3s ease;
+}
+.glass:hover {
+  box-shadow: 0 16px 44px -14px rgba(251, 146, 60, 0.2);
+}
+
+/* faint pitch-line grid for hero panels */
+.pitch-grid {
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--color-line) 55%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-line) 55%, transparent) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 90% 80% at 50% 30%, #000 35%, transparent 78%);
+}
+
+@keyframes pulse-live {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+.live-dot {
+  animation: pulse-live 1.4s ease-in-out infinite;
+}
+
+@keyframes slide-up {
+  from { transform: translateY(8px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.slide-up {
+  animation: slide-up 0.25s ease-out;
+}
+
+/* skeleton shimmer */
+@keyframes shimmer {
+  0% { background-position: -400px 0; }
+  100% { background-position: 400px 0; }
+}
+.skeleton {
+  border-radius: 8px;
+  background: linear-gradient(90deg, var(--color-elevated) 25%, var(--color-line) 50%, var(--color-elevated) 75%);
+  background-size: 800px 100%;
+  animation: shimmer 1.4s linear infinite;
+}
+
+/* probability bar segments animate width on data updates */
+.prob-seg {
+  transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}

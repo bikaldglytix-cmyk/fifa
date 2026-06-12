@@ -1,0 +1,21 @@
+{
+  "name": "@fifa/sim-engine",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FIFA 2026 simulation core: Dixon-Coles match model, Monte Carlo tournament engine, manager intelligence, AI predictions, fantasy scoring",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "dependencies": {
+    "@fifa/shared": "1.0.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^3.0.0"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "fifa2026-simulator",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "FIFA 2026 World Cup Simulator & Fantasy Prediction League - MVP (JavaScript/React)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.8"
+  }
+}

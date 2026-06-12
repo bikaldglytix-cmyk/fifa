@@ -1,0 +1,43 @@
+{
+  "name": "fifa2026-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "FIFA 2026 World Cup Simulator & Fantasy Prediction League — full-stack TypeScript monorepo",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.10"
+  },
+  "workspaces": [
+    "packages/shared",
+    "packages/db",
+    "packages/sim-engine",
+    "apps/api",
+    "apps/web"
+  ],
+  "scripts": {
+    "build:packages": "npm run build -w @fifa/shared && npm run build -w @fifa/sim-engine && npm run build -w @fifa/db",
+    "build:api": "npm run build -w @fifa/api",
+    "build:web": "npm run build -w @fifa/web",
+    "build": "npm run build:packages && npm run build:api && npm run build:web",
+    "db:migrate": "npm run migrate -w @fifa/db",
+    "db:seed": "npm run seed -w @fifa/db",
+    "setup": "npm run build:packages && npm run db:migrate && npm run db:seed",
+    "dev:api": "npm run start:dev -w @fifa/api",
+    "dev:web": "npm run dev -w @fifa/web",
+    "start:api": "npm run start:prod -w @fifa/api",
+    "start:web": "npm run start -w @fifa/web",
+    "test": "npm run test -w @fifa/sim-engine && npm run test -w @fifa/shared && npm run test:e2e -w @fifa/api",
+    "test:engine": "npm run test -w @fifa/sim-engine",
+    "test:api": "npm run test:e2e -w @fifa/api",
+    "lint": "npm run lint --workspaces --if-present",
+    "research:parse": "node research/parse.mjs",
+    "simulate": "node scripts/simulate-cli.mjs"
+  },
+  "dependencies": {
+    "@as-integrations/express5": "^1.1.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "rollup": "^4.61.1"
+  }
+}

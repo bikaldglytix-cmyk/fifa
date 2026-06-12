@@ -1,0 +1,1994 @@
+[
+  {
+    "matchNumber": 1,
+    "kickoffUtc": "2026-06-11T19:00:00.000Z",
+    "localDate": "2026-06-11",
+    "localTime": "13:00",
+    "utcOffset": -6,
+    "venueId": "estadio-azteca",
+    "home": {
+      "type": "team",
+      "code": "MEX"
+    },
+    "away": {
+      "type": "team",
+      "code": "RSA"
+    },
+    "stage": "group",
+    "group": "A",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 2,
+    "kickoffUtc": "2026-06-12T02:00:00.000Z",
+    "localDate": "2026-06-11",
+    "localTime": "20:00",
+    "utcOffset": -6,
+    "venueId": "estadio-akron",
+    "home": {
+      "type": "team",
+      "code": "KOR"
+    },
+    "away": {
+      "type": "team",
+      "code": "CZE"
+    },
+    "stage": "group",
+    "group": "A",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 3,
+    "kickoffUtc": "2026-06-12T19:00:00.000Z",
+    "localDate": "2026-06-12",
+    "localTime": "15:00",
+    "utcOffset": -4,
+    "venueId": "bmo-field",
+    "home": {
+      "type": "team",
+      "code": "CAN"
+    },
+    "away": {
+      "type": "team",
+      "code": "BIH"
+    },
+    "stage": "group",
+    "group": "B",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 4,
+    "kickoffUtc": "2026-06-13T01:00:00.000Z",
+    "localDate": "2026-06-12",
+    "localTime": "18:00",
+    "utcOffset": -7,
+    "venueId": "sofi-stadium",
+    "home": {
+      "type": "team",
+      "code": "USA"
+    },
+    "away": {
+      "type": "team",
+      "code": "PAR"
+    },
+    "stage": "group",
+    "group": "D",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 5,
+    "kickoffUtc": "2026-06-14T01:00:00.000Z",
+    "localDate": "2026-06-13",
+    "localTime": "21:00",
+    "utcOffset": -4,
+    "venueId": "gillette-stadium",
+    "home": {
+      "type": "team",
+      "code": "HAI"
+    },
+    "away": {
+      "type": "team",
+      "code": "SCO"
+    },
+    "stage": "group",
+    "group": "C",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 6,
+    "kickoffUtc": "2026-06-14T04:00:00.000Z",
+    "localDate": "2026-06-13",
+    "localTime": "21:00",
+    "utcOffset": -7,
+    "venueId": "bc-place",
+    "home": {
+      "type": "team",
+      "code": "AUS"
+    },
+    "away": {
+      "type": "team",
+      "code": "TUR"
+    },
+    "stage": "group",
+    "group": "D",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 7,
+    "kickoffUtc": "2026-06-13T22:00:00.000Z",
+    "localDate": "2026-06-13",
+    "localTime": "18:00",
+    "utcOffset": -4,
+    "venueId": "metlife-stadium",
+    "home": {
+      "type": "team",
+      "code": "BRA"
+    },
+    "away": {
+      "type": "team",
+      "code": "MAR"
+    },
+    "stage": "group",
+    "group": "C",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 8,
+    "kickoffUtc": "2026-06-13T19:00:00.000Z",
+    "localDate": "2026-06-13",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "levis-stadium",
+    "home": {
+      "type": "team",
+      "code": "QAT"
+    },
+    "away": {
+      "type": "team",
+      "code": "SUI"
+    },
+    "stage": "group",
+    "group": "B",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 9,
+    "kickoffUtc": "2026-06-14T23:00:00.000Z",
+    "localDate": "2026-06-14",
+    "localTime": "19:00",
+    "utcOffset": -4,
+    "venueId": "lincoln-financial-field",
+    "home": {
+      "type": "team",
+      "code": "CIV"
+    },
+    "away": {
+      "type": "team",
+      "code": "ECU"
+    },
+    "stage": "group",
+    "group": "E",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 10,
+    "kickoffUtc": "2026-06-14T17:00:00.000Z",
+    "localDate": "2026-06-14",
+    "localTime": "12:00",
+    "utcOffset": -5,
+    "venueId": "nrg-stadium",
+    "home": {
+      "type": "team",
+      "code": "GER"
+    },
+    "away": {
+      "type": "team",
+      "code": "CUW"
+    },
+    "stage": "group",
+    "group": "E",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 11,
+    "kickoffUtc": "2026-06-14T20:00:00.000Z",
+    "localDate": "2026-06-14",
+    "localTime": "15:00",
+    "utcOffset": -5,
+    "venueId": "att-stadium",
+    "home": {
+      "type": "team",
+      "code": "NED"
+    },
+    "away": {
+      "type": "team",
+      "code": "JPN"
+    },
+    "stage": "group",
+    "group": "F",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 12,
+    "kickoffUtc": "2026-06-15T02:00:00.000Z",
+    "localDate": "2026-06-14",
+    "localTime": "20:00",
+    "utcOffset": -6,
+    "venueId": "estadio-bbva",
+    "home": {
+      "type": "team",
+      "code": "SWE"
+    },
+    "away": {
+      "type": "team",
+      "code": "TUN"
+    },
+    "stage": "group",
+    "group": "F",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 13,
+    "kickoffUtc": "2026-06-15T22:00:00.000Z",
+    "localDate": "2026-06-15",
+    "localTime": "18:00",
+    "utcOffset": -4,
+    "venueId": "hard-rock-stadium",
+    "home": {
+      "type": "team",
+      "code": "KSA"
+    },
+    "away": {
+      "type": "team",
+      "code": "URU"
+    },
+    "stage": "group",
+    "group": "H",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 14,
+    "kickoffUtc": "2026-06-15T16:00:00.000Z",
+    "localDate": "2026-06-15",
+    "localTime": "12:00",
+    "utcOffset": -4,
+    "venueId": "mercedesbenz-stadium",
+    "home": {
+      "type": "team",
+      "code": "ESP"
+    },
+    "away": {
+      "type": "team",
+      "code": "CPV"
+    },
+    "stage": "group",
+    "group": "H",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 15,
+    "kickoffUtc": "2026-06-16T01:00:00.000Z",
+    "localDate": "2026-06-15",
+    "localTime": "18:00",
+    "utcOffset": -7,
+    "venueId": "sofi-stadium",
+    "home": {
+      "type": "team",
+      "code": "IRN"
+    },
+    "away": {
+      "type": "team",
+      "code": "NZL"
+    },
+    "stage": "group",
+    "group": "G",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 16,
+    "kickoffUtc": "2026-06-15T19:00:00.000Z",
+    "localDate": "2026-06-15",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "lumen-field",
+    "home": {
+      "type": "team",
+      "code": "BEL"
+    },
+    "away": {
+      "type": "team",
+      "code": "EGY"
+    },
+    "stage": "group",
+    "group": "G",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 17,
+    "kickoffUtc": "2026-06-16T19:00:00.000Z",
+    "localDate": "2026-06-16",
+    "localTime": "15:00",
+    "utcOffset": -4,
+    "venueId": "metlife-stadium",
+    "home": {
+      "type": "team",
+      "code": "FRA"
+    },
+    "away": {
+      "type": "team",
+      "code": "SEN"
+    },
+    "stage": "group",
+    "group": "I",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 18,
+    "kickoffUtc": "2026-06-16T22:00:00.000Z",
+    "localDate": "2026-06-16",
+    "localTime": "18:00",
+    "utcOffset": -4,
+    "venueId": "gillette-stadium",
+    "home": {
+      "type": "team",
+      "code": "IRQ"
+    },
+    "away": {
+      "type": "team",
+      "code": "NOR"
+    },
+    "stage": "group",
+    "group": "I",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 19,
+    "kickoffUtc": "2026-06-17T01:00:00.000Z",
+    "localDate": "2026-06-16",
+    "localTime": "20:00",
+    "utcOffset": -5,
+    "venueId": "arrowhead-stadium",
+    "home": {
+      "type": "team",
+      "code": "ARG"
+    },
+    "away": {
+      "type": "team",
+      "code": "ALG"
+    },
+    "stage": "group",
+    "group": "J",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 20,
+    "kickoffUtc": "2026-06-17T04:00:00.000Z",
+    "localDate": "2026-06-16",
+    "localTime": "21:00",
+    "utcOffset": -7,
+    "venueId": "levis-stadium",
+    "home": {
+      "type": "team",
+      "code": "AUT"
+    },
+    "away": {
+      "type": "team",
+      "code": "JOR"
+    },
+    "stage": "group",
+    "group": "J",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 21,
+    "kickoffUtc": "2026-06-17T23:00:00.000Z",
+    "localDate": "2026-06-17",
+    "localTime": "19:00",
+    "utcOffset": -4,
+    "venueId": "bmo-field",
+    "home": {
+      "type": "team",
+      "code": "GHA"
+    },
+    "away": {
+      "type": "team",
+      "code": "PAN"
+    },
+    "stage": "group",
+    "group": "L",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 22,
+    "kickoffUtc": "2026-06-17T20:00:00.000Z",
+    "localDate": "2026-06-17",
+    "localTime": "15:00",
+    "utcOffset": -5,
+    "venueId": "att-stadium",
+    "home": {
+      "type": "team",
+      "code": "ENG"
+    },
+    "away": {
+      "type": "team",
+      "code": "CRO"
+    },
+    "stage": "group",
+    "group": "L",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 23,
+    "kickoffUtc": "2026-06-17T17:00:00.000Z",
+    "localDate": "2026-06-17",
+    "localTime": "12:00",
+    "utcOffset": -5,
+    "venueId": "nrg-stadium",
+    "home": {
+      "type": "team",
+      "code": "POR"
+    },
+    "away": {
+      "type": "team",
+      "code": "COD"
+    },
+    "stage": "group",
+    "group": "K",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 24,
+    "kickoffUtc": "2026-06-18T02:00:00.000Z",
+    "localDate": "2026-06-17",
+    "localTime": "20:00",
+    "utcOffset": -6,
+    "venueId": "estadio-azteca",
+    "home": {
+      "type": "team",
+      "code": "UZB"
+    },
+    "away": {
+      "type": "team",
+      "code": "COL"
+    },
+    "stage": "group",
+    "group": "K",
+    "matchday": 1
+  },
+  {
+    "matchNumber": 25,
+    "kickoffUtc": "2026-06-18T16:00:00.000Z",
+    "localDate": "2026-06-18",
+    "localTime": "12:00",
+    "utcOffset": -4,
+    "venueId": "mercedesbenz-stadium",
+    "home": {
+      "type": "team",
+      "code": "CZE"
+    },
+    "away": {
+      "type": "team",
+      "code": "RSA"
+    },
+    "stage": "group",
+    "group": "A",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 26,
+    "kickoffUtc": "2026-06-18T19:00:00.000Z",
+    "localDate": "2026-06-18",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "sofi-stadium",
+    "home": {
+      "type": "team",
+      "code": "SUI"
+    },
+    "away": {
+      "type": "team",
+      "code": "BIH"
+    },
+    "stage": "group",
+    "group": "B",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 27,
+    "kickoffUtc": "2026-06-18T22:00:00.000Z",
+    "localDate": "2026-06-18",
+    "localTime": "15:00",
+    "utcOffset": -7,
+    "venueId": "bc-place",
+    "home": {
+      "type": "team",
+      "code": "CAN"
+    },
+    "away": {
+      "type": "team",
+      "code": "QAT"
+    },
+    "stage": "group",
+    "group": "B",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 28,
+    "kickoffUtc": "2026-06-19T01:00:00.000Z",
+    "localDate": "2026-06-18",
+    "localTime": "19:00",
+    "utcOffset": -6,
+    "venueId": "estadio-akron",
+    "home": {
+      "type": "team",
+      "code": "MEX"
+    },
+    "away": {
+      "type": "team",
+      "code": "KOR"
+    },
+    "stage": "group",
+    "group": "A",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 29,
+    "kickoffUtc": "2026-06-20T00:30:00.000Z",
+    "localDate": "2026-06-19",
+    "localTime": "20:30",
+    "utcOffset": -4,
+    "venueId": "lincoln-financial-field",
+    "home": {
+      "type": "team",
+      "code": "BRA"
+    },
+    "away": {
+      "type": "team",
+      "code": "HAI"
+    },
+    "stage": "group",
+    "group": "C",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 30,
+    "kickoffUtc": "2026-06-19T22:00:00.000Z",
+    "localDate": "2026-06-19",
+    "localTime": "18:00",
+    "utcOffset": -4,
+    "venueId": "gillette-stadium",
+    "home": {
+      "type": "team",
+      "code": "SCO"
+    },
+    "away": {
+      "type": "team",
+      "code": "MAR"
+    },
+    "stage": "group",
+    "group": "C",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 31,
+    "kickoffUtc": "2026-06-20T03:00:00.000Z",
+    "localDate": "2026-06-19",
+    "localTime": "20:00",
+    "utcOffset": -7,
+    "venueId": "levis-stadium",
+    "home": {
+      "type": "team",
+      "code": "TUR"
+    },
+    "away": {
+      "type": "team",
+      "code": "PAR"
+    },
+    "stage": "group",
+    "group": "D",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 32,
+    "kickoffUtc": "2026-06-19T19:00:00.000Z",
+    "localDate": "2026-06-19",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "lumen-field",
+    "home": {
+      "type": "team",
+      "code": "USA"
+    },
+    "away": {
+      "type": "team",
+      "code": "AUS"
+    },
+    "stage": "group",
+    "group": "D",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 33,
+    "kickoffUtc": "2026-06-20T20:00:00.000Z",
+    "localDate": "2026-06-20",
+    "localTime": "16:00",
+    "utcOffset": -4,
+    "venueId": "bmo-field",
+    "home": {
+      "type": "team",
+      "code": "GER"
+    },
+    "away": {
+      "type": "team",
+      "code": "CIV"
+    },
+    "stage": "group",
+    "group": "E",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 34,
+    "kickoffUtc": "2026-06-21T00:00:00.000Z",
+    "localDate": "2026-06-20",
+    "localTime": "19:00",
+    "utcOffset": -5,
+    "venueId": "arrowhead-stadium",
+    "home": {
+      "type": "team",
+      "code": "ECU"
+    },
+    "away": {
+      "type": "team",
+      "code": "CUW"
+    },
+    "stage": "group",
+    "group": "E",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 35,
+    "kickoffUtc": "2026-06-20T17:00:00.000Z",
+    "localDate": "2026-06-20",
+    "localTime": "12:00",
+    "utcOffset": -5,
+    "venueId": "nrg-stadium",
+    "home": {
+      "type": "team",
+      "code": "NED"
+    },
+    "away": {
+      "type": "team",
+      "code": "SWE"
+    },
+    "stage": "group",
+    "group": "F",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 36,
+    "kickoffUtc": "2026-06-21T04:00:00.000Z",
+    "localDate": "2026-06-20",
+    "localTime": "22:00",
+    "utcOffset": -6,
+    "venueId": "estadio-bbva",
+    "home": {
+      "type": "team",
+      "code": "TUN"
+    },
+    "away": {
+      "type": "team",
+      "code": "JPN"
+    },
+    "stage": "group",
+    "group": "F",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 37,
+    "kickoffUtc": "2026-06-21T22:00:00.000Z",
+    "localDate": "2026-06-21",
+    "localTime": "18:00",
+    "utcOffset": -4,
+    "venueId": "hard-rock-stadium",
+    "home": {
+      "type": "team",
+      "code": "URU"
+    },
+    "away": {
+      "type": "team",
+      "code": "CPV"
+    },
+    "stage": "group",
+    "group": "H",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 38,
+    "kickoffUtc": "2026-06-21T16:00:00.000Z",
+    "localDate": "2026-06-21",
+    "localTime": "12:00",
+    "utcOffset": -4,
+    "venueId": "mercedesbenz-stadium",
+    "home": {
+      "type": "team",
+      "code": "ESP"
+    },
+    "away": {
+      "type": "team",
+      "code": "KSA"
+    },
+    "stage": "group",
+    "group": "H",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 39,
+    "kickoffUtc": "2026-06-21T19:00:00.000Z",
+    "localDate": "2026-06-21",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "sofi-stadium",
+    "home": {
+      "type": "team",
+      "code": "BEL"
+    },
+    "away": {
+      "type": "team",
+      "code": "IRN"
+    },
+    "stage": "group",
+    "group": "G",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 40,
+    "kickoffUtc": "2026-06-22T01:00:00.000Z",
+    "localDate": "2026-06-21",
+    "localTime": "18:00",
+    "utcOffset": -7,
+    "venueId": "bc-place",
+    "home": {
+      "type": "team",
+      "code": "NZL"
+    },
+    "away": {
+      "type": "team",
+      "code": "EGY"
+    },
+    "stage": "group",
+    "group": "G",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 41,
+    "kickoffUtc": "2026-06-23T00:00:00.000Z",
+    "localDate": "2026-06-22",
+    "localTime": "20:00",
+    "utcOffset": -4,
+    "venueId": "metlife-stadium",
+    "home": {
+      "type": "team",
+      "code": "NOR"
+    },
+    "away": {
+      "type": "team",
+      "code": "SEN"
+    },
+    "stage": "group",
+    "group": "I",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 42,
+    "kickoffUtc": "2026-06-22T21:00:00.000Z",
+    "localDate": "2026-06-22",
+    "localTime": "17:00",
+    "utcOffset": -4,
+    "venueId": "lincoln-financial-field",
+    "home": {
+      "type": "team",
+      "code": "FRA"
+    },
+    "away": {
+      "type": "team",
+      "code": "IRQ"
+    },
+    "stage": "group",
+    "group": "I",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 43,
+    "kickoffUtc": "2026-06-22T17:00:00.000Z",
+    "localDate": "2026-06-22",
+    "localTime": "12:00",
+    "utcOffset": -5,
+    "venueId": "att-stadium",
+    "home": {
+      "type": "team",
+      "code": "ARG"
+    },
+    "away": {
+      "type": "team",
+      "code": "AUT"
+    },
+    "stage": "group",
+    "group": "J",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 44,
+    "kickoffUtc": "2026-06-23T03:00:00.000Z",
+    "localDate": "2026-06-22",
+    "localTime": "20:00",
+    "utcOffset": -7,
+    "venueId": "levis-stadium",
+    "home": {
+      "type": "team",
+      "code": "JOR"
+    },
+    "away": {
+      "type": "team",
+      "code": "ALG"
+    },
+    "stage": "group",
+    "group": "J",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 45,
+    "kickoffUtc": "2026-06-23T20:00:00.000Z",
+    "localDate": "2026-06-23",
+    "localTime": "16:00",
+    "utcOffset": -4,
+    "venueId": "gillette-stadium",
+    "home": {
+      "type": "team",
+      "code": "ENG"
+    },
+    "away": {
+      "type": "team",
+      "code": "GHA"
+    },
+    "stage": "group",
+    "group": "L",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 46,
+    "kickoffUtc": "2026-06-23T23:00:00.000Z",
+    "localDate": "2026-06-23",
+    "localTime": "19:00",
+    "utcOffset": -4,
+    "venueId": "bmo-field",
+    "home": {
+      "type": "team",
+      "code": "PAN"
+    },
+    "away": {
+      "type": "team",
+      "code": "CRO"
+    },
+    "stage": "group",
+    "group": "L",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 47,
+    "kickoffUtc": "2026-06-23T17:00:00.000Z",
+    "localDate": "2026-06-23",
+    "localTime": "12:00",
+    "utcOffset": -5,
+    "venueId": "nrg-stadium",
+    "home": {
+      "type": "team",
+      "code": "POR"
+    },
+    "away": {
+      "type": "team",
+      "code": "UZB"
+    },
+    "stage": "group",
+    "group": "K",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 48,
+    "kickoffUtc": "2026-06-24T02:00:00.000Z",
+    "localDate": "2026-06-23",
+    "localTime": "20:00",
+    "utcOffset": -6,
+    "venueId": "estadio-akron",
+    "home": {
+      "type": "team",
+      "code": "COL"
+    },
+    "away": {
+      "type": "team",
+      "code": "COD"
+    },
+    "stage": "group",
+    "group": "K",
+    "matchday": 2
+  },
+  {
+    "matchNumber": 49,
+    "kickoffUtc": "2026-06-24T22:00:00.000Z",
+    "localDate": "2026-06-24",
+    "localTime": "18:00",
+    "utcOffset": -4,
+    "venueId": "hard-rock-stadium",
+    "home": {
+      "type": "team",
+      "code": "SCO"
+    },
+    "away": {
+      "type": "team",
+      "code": "BRA"
+    },
+    "stage": "group",
+    "group": "C",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 50,
+    "kickoffUtc": "2026-06-24T22:00:00.000Z",
+    "localDate": "2026-06-24",
+    "localTime": "18:00",
+    "utcOffset": -4,
+    "venueId": "mercedesbenz-stadium",
+    "home": {
+      "type": "team",
+      "code": "MAR"
+    },
+    "away": {
+      "type": "team",
+      "code": "HAI"
+    },
+    "stage": "group",
+    "group": "C",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 51,
+    "kickoffUtc": "2026-06-24T19:00:00.000Z",
+    "localDate": "2026-06-24",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "bc-place",
+    "home": {
+      "type": "team",
+      "code": "SUI"
+    },
+    "away": {
+      "type": "team",
+      "code": "CAN"
+    },
+    "stage": "group",
+    "group": "B",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 52,
+    "kickoffUtc": "2026-06-24T19:00:00.000Z",
+    "localDate": "2026-06-24",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "lumen-field",
+    "home": {
+      "type": "team",
+      "code": "BIH"
+    },
+    "away": {
+      "type": "team",
+      "code": "QAT"
+    },
+    "stage": "group",
+    "group": "B",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 53,
+    "kickoffUtc": "2026-06-25T01:00:00.000Z",
+    "localDate": "2026-06-24",
+    "localTime": "19:00",
+    "utcOffset": -6,
+    "venueId": "estadio-azteca",
+    "home": {
+      "type": "team",
+      "code": "CZE"
+    },
+    "away": {
+      "type": "team",
+      "code": "MEX"
+    },
+    "stage": "group",
+    "group": "A",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 54,
+    "kickoffUtc": "2026-06-25T01:00:00.000Z",
+    "localDate": "2026-06-24",
+    "localTime": "19:00",
+    "utcOffset": -6,
+    "venueId": "estadio-bbva",
+    "home": {
+      "type": "team",
+      "code": "RSA"
+    },
+    "away": {
+      "type": "team",
+      "code": "KOR"
+    },
+    "stage": "group",
+    "group": "A",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 55,
+    "kickoffUtc": "2026-06-25T20:00:00.000Z",
+    "localDate": "2026-06-25",
+    "localTime": "16:00",
+    "utcOffset": -4,
+    "venueId": "lincoln-financial-field",
+    "home": {
+      "type": "team",
+      "code": "CUW"
+    },
+    "away": {
+      "type": "team",
+      "code": "CIV"
+    },
+    "stage": "group",
+    "group": "E",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 56,
+    "kickoffUtc": "2026-06-25T20:00:00.000Z",
+    "localDate": "2026-06-25",
+    "localTime": "16:00",
+    "utcOffset": -4,
+    "venueId": "metlife-stadium",
+    "home": {
+      "type": "team",
+      "code": "ECU"
+    },
+    "away": {
+      "type": "team",
+      "code": "GER"
+    },
+    "stage": "group",
+    "group": "E",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 57,
+    "kickoffUtc": "2026-06-25T23:00:00.000Z",
+    "localDate": "2026-06-25",
+    "localTime": "18:00",
+    "utcOffset": -5,
+    "venueId": "att-stadium",
+    "home": {
+      "type": "team",
+      "code": "JPN"
+    },
+    "away": {
+      "type": "team",
+      "code": "SWE"
+    },
+    "stage": "group",
+    "group": "F",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 58,
+    "kickoffUtc": "2026-06-25T23:00:00.000Z",
+    "localDate": "2026-06-25",
+    "localTime": "18:00",
+    "utcOffset": -5,
+    "venueId": "arrowhead-stadium",
+    "home": {
+      "type": "team",
+      "code": "TUN"
+    },
+    "away": {
+      "type": "team",
+      "code": "NED"
+    },
+    "stage": "group",
+    "group": "F",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 59,
+    "kickoffUtc": "2026-06-26T02:00:00.000Z",
+    "localDate": "2026-06-25",
+    "localTime": "19:00",
+    "utcOffset": -7,
+    "venueId": "sofi-stadium",
+    "home": {
+      "type": "team",
+      "code": "TUR"
+    },
+    "away": {
+      "type": "team",
+      "code": "USA"
+    },
+    "stage": "group",
+    "group": "D",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 60,
+    "kickoffUtc": "2026-06-26T02:00:00.000Z",
+    "localDate": "2026-06-25",
+    "localTime": "19:00",
+    "utcOffset": -7,
+    "venueId": "levis-stadium",
+    "home": {
+      "type": "team",
+      "code": "PAR"
+    },
+    "away": {
+      "type": "team",
+      "code": "AUS"
+    },
+    "stage": "group",
+    "group": "D",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 61,
+    "kickoffUtc": "2026-06-26T19:00:00.000Z",
+    "localDate": "2026-06-26",
+    "localTime": "15:00",
+    "utcOffset": -4,
+    "venueId": "gillette-stadium",
+    "home": {
+      "type": "team",
+      "code": "NOR"
+    },
+    "away": {
+      "type": "team",
+      "code": "FRA"
+    },
+    "stage": "group",
+    "group": "I",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 62,
+    "kickoffUtc": "2026-06-26T19:00:00.000Z",
+    "localDate": "2026-06-26",
+    "localTime": "15:00",
+    "utcOffset": -4,
+    "venueId": "bmo-field",
+    "home": {
+      "type": "team",
+      "code": "SEN"
+    },
+    "away": {
+      "type": "team",
+      "code": "IRQ"
+    },
+    "stage": "group",
+    "group": "I",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 63,
+    "kickoffUtc": "2026-06-27T03:00:00.000Z",
+    "localDate": "2026-06-26",
+    "localTime": "20:00",
+    "utcOffset": -7,
+    "venueId": "lumen-field",
+    "home": {
+      "type": "team",
+      "code": "EGY"
+    },
+    "away": {
+      "type": "team",
+      "code": "IRN"
+    },
+    "stage": "group",
+    "group": "G",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 64,
+    "kickoffUtc": "2026-06-27T03:00:00.000Z",
+    "localDate": "2026-06-26",
+    "localTime": "20:00",
+    "utcOffset": -7,
+    "venueId": "bc-place",
+    "home": {
+      "type": "team",
+      "code": "NZL"
+    },
+    "away": {
+      "type": "team",
+      "code": "BEL"
+    },
+    "stage": "group",
+    "group": "G",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 65,
+    "kickoffUtc": "2026-06-27T00:00:00.000Z",
+    "localDate": "2026-06-26",
+    "localTime": "19:00",
+    "utcOffset": -5,
+    "venueId": "nrg-stadium",
+    "home": {
+      "type": "team",
+      "code": "CPV"
+    },
+    "away": {
+      "type": "team",
+      "code": "KSA"
+    },
+    "stage": "group",
+    "group": "H",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 66,
+    "kickoffUtc": "2026-06-27T00:00:00.000Z",
+    "localDate": "2026-06-26",
+    "localTime": "18:00",
+    "utcOffset": -6,
+    "venueId": "estadio-akron",
+    "home": {
+      "type": "team",
+      "code": "URU"
+    },
+    "away": {
+      "type": "team",
+      "code": "ESP"
+    },
+    "stage": "group",
+    "group": "H",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 67,
+    "kickoffUtc": "2026-06-27T21:00:00.000Z",
+    "localDate": "2026-06-27",
+    "localTime": "17:00",
+    "utcOffset": -4,
+    "venueId": "metlife-stadium",
+    "home": {
+      "type": "team",
+      "code": "PAN"
+    },
+    "away": {
+      "type": "team",
+      "code": "ENG"
+    },
+    "stage": "group",
+    "group": "L",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 68,
+    "kickoffUtc": "2026-06-27T21:00:00.000Z",
+    "localDate": "2026-06-27",
+    "localTime": "17:00",
+    "utcOffset": -4,
+    "venueId": "lincoln-financial-field",
+    "home": {
+      "type": "team",
+      "code": "CRO"
+    },
+    "away": {
+      "type": "team",
+      "code": "GHA"
+    },
+    "stage": "group",
+    "group": "L",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 69,
+    "kickoffUtc": "2026-06-28T02:00:00.000Z",
+    "localDate": "2026-06-27",
+    "localTime": "21:00",
+    "utcOffset": -5,
+    "venueId": "arrowhead-stadium",
+    "home": {
+      "type": "team",
+      "code": "ALG"
+    },
+    "away": {
+      "type": "team",
+      "code": "AUT"
+    },
+    "stage": "group",
+    "group": "J",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 70,
+    "kickoffUtc": "2026-06-28T02:00:00.000Z",
+    "localDate": "2026-06-27",
+    "localTime": "21:00",
+    "utcOffset": -5,
+    "venueId": "att-stadium",
+    "home": {
+      "type": "team",
+      "code": "JOR"
+    },
+    "away": {
+      "type": "team",
+      "code": "ARG"
+    },
+    "stage": "group",
+    "group": "J",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 71,
+    "kickoffUtc": "2026-06-27T23:30:00.000Z",
+    "localDate": "2026-06-27",
+    "localTime": "19:30",
+    "utcOffset": -4,
+    "venueId": "hard-rock-stadium",
+    "home": {
+      "type": "team",
+      "code": "COL"
+    },
+    "away": {
+      "type": "team",
+      "code": "POR"
+    },
+    "stage": "group",
+    "group": "K",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 72,
+    "kickoffUtc": "2026-06-27T23:30:00.000Z",
+    "localDate": "2026-06-27",
+    "localTime": "19:30",
+    "utcOffset": -4,
+    "venueId": "mercedesbenz-stadium",
+    "home": {
+      "type": "team",
+      "code": "COD"
+    },
+    "away": {
+      "type": "team",
+      "code": "UZB"
+    },
+    "stage": "group",
+    "group": "K",
+    "matchday": 3
+  },
+  {
+    "matchNumber": 73,
+    "kickoffUtc": "2026-06-28T19:00:00.000Z",
+    "localDate": "2026-06-28",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "sofi-stadium",
+    "home": {
+      "type": "groupRunnerUp",
+      "group": "A"
+    },
+    "away": {
+      "type": "groupRunnerUp",
+      "group": "B"
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 74,
+    "kickoffUtc": "2026-06-29T20:30:00.000Z",
+    "localDate": "2026-06-29",
+    "localTime": "16:30",
+    "utcOffset": -4,
+    "venueId": "gillette-stadium",
+    "home": {
+      "type": "groupWinner",
+      "group": "E"
+    },
+    "away": {
+      "type": "thirdPlace",
+      "allowedGroups": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F"
+      ]
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 75,
+    "kickoffUtc": "2026-06-30T01:00:00.000Z",
+    "localDate": "2026-06-29",
+    "localTime": "19:00",
+    "utcOffset": -6,
+    "venueId": "estadio-bbva",
+    "home": {
+      "type": "groupWinner",
+      "group": "F"
+    },
+    "away": {
+      "type": "groupRunnerUp",
+      "group": "C"
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 76,
+    "kickoffUtc": "2026-06-29T17:00:00.000Z",
+    "localDate": "2026-06-29",
+    "localTime": "12:00",
+    "utcOffset": -5,
+    "venueId": "nrg-stadium",
+    "home": {
+      "type": "groupWinner",
+      "group": "C"
+    },
+    "away": {
+      "type": "groupRunnerUp",
+      "group": "F"
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 77,
+    "kickoffUtc": "2026-06-30T21:00:00.000Z",
+    "localDate": "2026-06-30",
+    "localTime": "17:00",
+    "utcOffset": -4,
+    "venueId": "metlife-stadium",
+    "home": {
+      "type": "groupWinner",
+      "group": "I"
+    },
+    "away": {
+      "type": "thirdPlace",
+      "allowedGroups": [
+        "C",
+        "D",
+        "F",
+        "G",
+        "H"
+      ]
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 78,
+    "kickoffUtc": "2026-06-30T17:00:00.000Z",
+    "localDate": "2026-06-30",
+    "localTime": "12:00",
+    "utcOffset": -5,
+    "venueId": "att-stadium",
+    "home": {
+      "type": "groupRunnerUp",
+      "group": "E"
+    },
+    "away": {
+      "type": "groupRunnerUp",
+      "group": "I"
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 79,
+    "kickoffUtc": "2026-07-01T01:00:00.000Z",
+    "localDate": "2026-06-30",
+    "localTime": "19:00",
+    "utcOffset": -6,
+    "venueId": "estadio-azteca",
+    "home": {
+      "type": "groupWinner",
+      "group": "A"
+    },
+    "away": {
+      "type": "thirdPlace",
+      "allowedGroups": [
+        "C",
+        "E",
+        "F",
+        "H",
+        "I"
+      ]
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 80,
+    "kickoffUtc": "2026-07-01T16:00:00.000Z",
+    "localDate": "2026-07-01",
+    "localTime": "12:00",
+    "utcOffset": -4,
+    "venueId": "mercedesbenz-stadium",
+    "home": {
+      "type": "groupWinner",
+      "group": "L"
+    },
+    "away": {
+      "type": "thirdPlace",
+      "allowedGroups": [
+        "E",
+        "H",
+        "I",
+        "J",
+        "K"
+      ]
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 81,
+    "kickoffUtc": "2026-07-02T00:00:00.000Z",
+    "localDate": "2026-07-01",
+    "localTime": "17:00",
+    "utcOffset": -7,
+    "venueId": "levis-stadium",
+    "home": {
+      "type": "groupWinner",
+      "group": "D"
+    },
+    "away": {
+      "type": "thirdPlace",
+      "allowedGroups": [
+        "B",
+        "E",
+        "F",
+        "I",
+        "J"
+      ]
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 82,
+    "kickoffUtc": "2026-07-01T20:00:00.000Z",
+    "localDate": "2026-07-01",
+    "localTime": "13:00",
+    "utcOffset": -7,
+    "venueId": "lumen-field",
+    "home": {
+      "type": "groupWinner",
+      "group": "G"
+    },
+    "away": {
+      "type": "thirdPlace",
+      "allowedGroups": [
+        "A",
+        "E",
+        "H",
+        "I",
+        "J"
+      ]
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 83,
+    "kickoffUtc": "2026-07-02T23:00:00.000Z",
+    "localDate": "2026-07-02",
+    "localTime": "19:00",
+    "utcOffset": -4,
+    "venueId": "bmo-field",
+    "home": {
+      "type": "groupRunnerUp",
+      "group": "K"
+    },
+    "away": {
+      "type": "groupRunnerUp",
+      "group": "L"
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 84,
+    "kickoffUtc": "2026-07-02T19:00:00.000Z",
+    "localDate": "2026-07-02",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "sofi-stadium",
+    "home": {
+      "type": "groupWinner",
+      "group": "H"
+    },
+    "away": {
+      "type": "groupRunnerUp",
+      "group": "J"
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 85,
+    "kickoffUtc": "2026-07-03T03:00:00.000Z",
+    "localDate": "2026-07-02",
+    "localTime": "20:00",
+    "utcOffset": -7,
+    "venueId": "bc-place",
+    "home": {
+      "type": "groupWinner",
+      "group": "B"
+    },
+    "away": {
+      "type": "thirdPlace",
+      "allowedGroups": [
+        "E",
+        "F",
+        "G",
+        "I",
+        "J"
+      ]
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 86,
+    "kickoffUtc": "2026-07-03T22:00:00.000Z",
+    "localDate": "2026-07-03",
+    "localTime": "18:00",
+    "utcOffset": -4,
+    "venueId": "hard-rock-stadium",
+    "home": {
+      "type": "groupWinner",
+      "group": "J"
+    },
+    "away": {
+      "type": "groupRunnerUp",
+      "group": "H"
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 87,
+    "kickoffUtc": "2026-07-04T01:30:00.000Z",
+    "localDate": "2026-07-03",
+    "localTime": "20:30",
+    "utcOffset": -5,
+    "venueId": "arrowhead-stadium",
+    "home": {
+      "type": "groupWinner",
+      "group": "K"
+    },
+    "away": {
+      "type": "thirdPlace",
+      "allowedGroups": [
+        "D",
+        "E",
+        "I",
+        "J",
+        "L"
+      ]
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 88,
+    "kickoffUtc": "2026-07-03T18:00:00.000Z",
+    "localDate": "2026-07-03",
+    "localTime": "13:00",
+    "utcOffset": -5,
+    "venueId": "att-stadium",
+    "home": {
+      "type": "groupRunnerUp",
+      "group": "D"
+    },
+    "away": {
+      "type": "groupRunnerUp",
+      "group": "G"
+    },
+    "stage": "round32",
+    "group": null
+  },
+  {
+    "matchNumber": 89,
+    "kickoffUtc": "2026-07-04T21:00:00.000Z",
+    "localDate": "2026-07-04",
+    "localTime": "17:00",
+    "utcOffset": -4,
+    "venueId": "lincoln-financial-field",
+    "home": {
+      "type": "matchWinner",
+      "match": 74
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 77
+    },
+    "stage": "round16",
+    "group": null
+  },
+  {
+    "matchNumber": 90,
+    "kickoffUtc": "2026-07-04T17:00:00.000Z",
+    "localDate": "2026-07-04",
+    "localTime": "12:00",
+    "utcOffset": -5,
+    "venueId": "nrg-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 73
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 75
+    },
+    "stage": "round16",
+    "group": null
+  },
+  {
+    "matchNumber": 91,
+    "kickoffUtc": "2026-07-05T20:00:00.000Z",
+    "localDate": "2026-07-05",
+    "localTime": "16:00",
+    "utcOffset": -4,
+    "venueId": "metlife-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 76
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 78
+    },
+    "stage": "round16",
+    "group": null
+  },
+  {
+    "matchNumber": 92,
+    "kickoffUtc": "2026-07-06T00:00:00.000Z",
+    "localDate": "2026-07-05",
+    "localTime": "18:00",
+    "utcOffset": -6,
+    "venueId": "estadio-azteca",
+    "home": {
+      "type": "matchWinner",
+      "match": 79
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 80
+    },
+    "stage": "round16",
+    "group": null
+  },
+  {
+    "matchNumber": 93,
+    "kickoffUtc": "2026-07-06T19:00:00.000Z",
+    "localDate": "2026-07-06",
+    "localTime": "14:00",
+    "utcOffset": -5,
+    "venueId": "att-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 83
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 84
+    },
+    "stage": "round16",
+    "group": null
+  },
+  {
+    "matchNumber": 94,
+    "kickoffUtc": "2026-07-07T00:00:00.000Z",
+    "localDate": "2026-07-06",
+    "localTime": "17:00",
+    "utcOffset": -7,
+    "venueId": "lumen-field",
+    "home": {
+      "type": "matchWinner",
+      "match": 81
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 82
+    },
+    "stage": "round16",
+    "group": null
+  },
+  {
+    "matchNumber": 95,
+    "kickoffUtc": "2026-07-07T16:00:00.000Z",
+    "localDate": "2026-07-07",
+    "localTime": "12:00",
+    "utcOffset": -4,
+    "venueId": "mercedesbenz-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 86
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 88
+    },
+    "stage": "round16",
+    "group": null
+  },
+  {
+    "matchNumber": 96,
+    "kickoffUtc": "2026-07-07T20:00:00.000Z",
+    "localDate": "2026-07-07",
+    "localTime": "13:00",
+    "utcOffset": -7,
+    "venueId": "bc-place",
+    "home": {
+      "type": "matchWinner",
+      "match": 85
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 87
+    },
+    "stage": "round16",
+    "group": null
+  },
+  {
+    "matchNumber": 97,
+    "kickoffUtc": "2026-07-09T20:00:00.000Z",
+    "localDate": "2026-07-09",
+    "localTime": "16:00",
+    "utcOffset": -4,
+    "venueId": "gillette-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 89
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 90
+    },
+    "stage": "quarterfinal",
+    "group": null
+  },
+  {
+    "matchNumber": 98,
+    "kickoffUtc": "2026-07-10T19:00:00.000Z",
+    "localDate": "2026-07-10",
+    "localTime": "12:00",
+    "utcOffset": -7,
+    "venueId": "sofi-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 93
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 94
+    },
+    "stage": "quarterfinal",
+    "group": null
+  },
+  {
+    "matchNumber": 99,
+    "kickoffUtc": "2026-07-11T21:00:00.000Z",
+    "localDate": "2026-07-11",
+    "localTime": "17:00",
+    "utcOffset": -4,
+    "venueId": "hard-rock-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 91
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 92
+    },
+    "stage": "quarterfinal",
+    "group": null
+  },
+  {
+    "matchNumber": 100,
+    "kickoffUtc": "2026-07-12T01:00:00.000Z",
+    "localDate": "2026-07-11",
+    "localTime": "20:00",
+    "utcOffset": -5,
+    "venueId": "arrowhead-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 95
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 96
+    },
+    "stage": "quarterfinal",
+    "group": null
+  },
+  {
+    "matchNumber": 101,
+    "kickoffUtc": "2026-07-14T19:00:00.000Z",
+    "localDate": "2026-07-14",
+    "localTime": "14:00",
+    "utcOffset": -5,
+    "venueId": "att-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 97
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 98
+    },
+    "stage": "semifinal",
+    "group": null
+  },
+  {
+    "matchNumber": 102,
+    "kickoffUtc": "2026-07-15T19:00:00.000Z",
+    "localDate": "2026-07-15",
+    "localTime": "15:00",
+    "utcOffset": -4,
+    "venueId": "mercedesbenz-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 99
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 100
+    },
+    "stage": "semifinal",
+    "group": null
+  },
+  {
+    "matchNumber": 103,
+    "kickoffUtc": "2026-07-18T21:00:00.000Z",
+    "localDate": "2026-07-18",
+    "localTime": "17:00",
+    "utcOffset": -4,
+    "venueId": "hard-rock-stadium",
+    "home": {
+      "type": "matchLoser",
+      "match": 101
+    },
+    "away": {
+      "type": "matchLoser",
+      "match": 102
+    },
+    "stage": "third_place",
+    "group": null
+  },
+  {
+    "matchNumber": 104,
+    "kickoffUtc": "2026-07-19T19:00:00.000Z",
+    "localDate": "2026-07-19",
+    "localTime": "15:00",
+    "utcOffset": -4,
+    "venueId": "metlife-stadium",
+    "home": {
+      "type": "matchWinner",
+      "match": 101
+    },
+    "away": {
+      "type": "matchWinner",
+      "match": 102
+    },
+    "stage": "final",
+    "group": null
+  }
+]

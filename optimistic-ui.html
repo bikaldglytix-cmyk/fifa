@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Optimistic UI</title>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fafaf9;
+    --card-bg: #ffffff;
+    --text-main: #27272a;
+    --text-muted: #71717a;
+    --accent: #fb923c;
+    --accent-hover: #f97316;
+    --border: #f4f4f5;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg);
+    color: var(--text-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 40px;
+    width: 320px;
+    box-shadow: 0 10px 40px -10px rgba(251, 146, 60, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(251, 146, 60, 0.25);
+  }
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+  }
+  .subtitle {
+    font-size: 15px;
+    color: var(--text-muted);
+    font-weight: 300;
+    margin: 0 0 32px 0;
+    line-height: 1.5;
+  }
+  .button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 100px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.2s ease;
+    width: 100%;
+  }
+  .button:hover {
+    background: var(--accent-hover);
+    transform: scale(1.02);
+  }
+  .button:active {
+    transform: scale(0.98);
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1 class="title">Morning Light</h1>
+    <p class="subtitle">A fresh start to your day. Everything is set up and ready for you.</p>
+    <button class="button">Begin</button>
+  </div>
+</body>
+</html>
