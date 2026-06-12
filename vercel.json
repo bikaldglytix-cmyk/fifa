@@ -1,7 +1,1 @@
-{
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm run build -w @fifa/shared && npm run build -w @fifa/web",
-  "installCommand": "npm install",
-  "framework": "nextjs",
-  "outputDirectory": "apps/web/.next"
-}
+{}
