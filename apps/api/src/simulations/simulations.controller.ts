@@ -48,14 +48,14 @@ class SimulateMatchDto {
   @IsOptional() @IsInt() @Min(1) @Max(104) matchNumber?: number;
   @IsOptional() @IsString() @Length(3, 3) homeCode?: string;
   @IsOptional() @IsString() @Length(3, 3) awayCode?: string;
-  @IsOptional() @IsInt() @Min(1) @Max(200_000) runs?: number;
+  @IsOptional() @IsInt() @Min(1) runs?: number;
   @IsOptional() @IsInt() seed?: number;
   @IsOptional() @IsBoolean() knockout?: boolean;
   @IsOptional() @ValidateNested() @Type(() => LineupDto) homeLineup?: LineupDto;
 }
 
 class TournamentJobDto {
-  @IsOptional() @IsInt() @Min(10) @Max(1_000_000) runs?: number;
+  @IsOptional() @IsInt() @Min(10) runs?: number;
   @IsOptional() @IsInt() seed?: number;
   @IsOptional() @IsString() @Length(3, 3) pinnedTeam?: string;
   @IsOptional() @ValidateNested() @Type(() => LineupDto) pinnedLineup?: LineupDto;

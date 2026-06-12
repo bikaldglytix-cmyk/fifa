@@ -62,11 +62,12 @@ exports.HOST_COUNTRIES = ['USA', 'MEX', 'CAN'];
 // ---------------------------------------------------------------------------
 // Simulation limits / product gating
 // ---------------------------------------------------------------------------
+const UNLIMITED = Number.MAX_SAFE_INTEGER;
 exports.SIM_LIMITS = {
-    guest: { maxRunsPerCall: 1_000, dailyCalls: 20, monteCarloMax: 1_000 },
-    registered: { maxRunsPerCall: 10_000, dailyCalls: 200, monteCarloMax: 10_000 },
-    premium: { maxRunsPerCall: 100_000, dailyCalls: 2_000, monteCarloMax: 100_000 },
-    admin: { maxRunsPerCall: 1_000_000, dailyCalls: 100_000, monteCarloMax: 1_000_000 },
+    guest: { maxRunsPerCall: UNLIMITED, dailyCalls: UNLIMITED, monteCarloMax: UNLIMITED },
+    registered: { maxRunsPerCall: UNLIMITED, dailyCalls: UNLIMITED, monteCarloMax: UNLIMITED },
+    premium: { maxRunsPerCall: UNLIMITED, dailyCalls: UNLIMITED, monteCarloMax: UNLIMITED },
+    admin: { maxRunsPerCall: UNLIMITED, dailyCalls: UNLIMITED, monteCarloMax: UNLIMITED },
 };
 exports.DEFAULT_MATCH_SIMS = 10_000;
 exports.DEFAULT_TOURNAMENT_RUNS = 1_000;

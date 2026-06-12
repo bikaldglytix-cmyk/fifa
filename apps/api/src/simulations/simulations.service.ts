@@ -90,7 +90,7 @@ export class SimulationsService {
       homeLineup?: { formation: FormationId; startingXi: LineupSlotAssignment[] };
     },
   ) {
-    const runs = Math.max(1, Math.min(dto.runs ?? DEFAULT_MATCH_SIMS, 200_000));
+    const runs = Math.max(1, dto.runs ?? DEFAULT_MATCH_SIMS);
     this.enforceLimits(user, runs);
 
     let homeCode: string;

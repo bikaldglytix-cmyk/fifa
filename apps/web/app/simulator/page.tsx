@@ -102,7 +102,7 @@ function MatchSimulator({ initialMatch, initialPair }: { initialMatch: string | 
   const [busy, setBusy] = useState(false);
   const [result, setResult] = useState<any>(null);
 
-  const maxRuns = user?.role === 'premium' || user?.role === 'admin' ? 100_000 : user ? 10_000 : 1_000;
+  const maxRuns = 1_000_000;
 
   const run = async () => {
     setBusy(true);
@@ -191,7 +191,6 @@ function MatchSimulator({ initialMatch, initialPair }: { initialMatch: string | 
               onChange={(e) => setRuns(Number(e.target.value))}
               className="w-full accent-[var(--color-primary)]"
             />
-            {!user && <p className="mt-1 text-[10px] text-muted">Guests: 1,000 max — register for 10,000, premium for 100,000.</p>}
           </div>
           <Button onClick={run} disabled={busy} size="lg" className="w-full">
             {busy ? 'Running…' : '⚡ SIMULATE'}
@@ -330,7 +329,7 @@ function TournamentSimulator() {
   const [result, setResult] = useState<any>(null);
   const esRef = useRef<EventSource | null>(null);
 
-  const maxRuns = user?.role === 'premium' || user?.role === 'admin' ? 100_000 : user ? 10_000 : 1_000;
+  const maxRuns = 1_000_000;
 
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
