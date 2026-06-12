@@ -14,6 +14,7 @@ const LINKS = [
   { href: '/matches', label: 'Matches' },
   { href: '/my-team', label: 'My Team' },
   { href: '/players', label: 'Players' },
+  { href: '/analytics', label: 'Analytics' },
   { href: '/leaderboard', label: 'Leaderboard' },
   { href: '/leagues', label: 'Leagues' },
 ];

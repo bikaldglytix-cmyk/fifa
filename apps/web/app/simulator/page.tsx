@@ -3,7 +3,7 @@
 import { Suspense, useEffect, useMemo, useRef, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { post } from '../../lib/api';
-import { useApi, fmtPct } from '../../lib/hooks';
+import { useApi, useLiveMatch, fmtPct } from '../../lib/hooks';
 import { useAuth } from '../../lib/auth';
 import { Badge, Button, Card, Flag, ProbBar, ProgressBar, Select, Spinner, Stat, Tabs, useToast } from '../../components/ui';
 import { PageSkeleton } from '../../components/intel';
@@ -41,11 +41,58 @@ function Simulator() {
 
 // ---------------------------------------------------------------------------
 
+/** Realtime scoreboard for one in-play match: seeds from /matches/live, then
+ *  ticks instantly from MATCH_LIVE_UPDATE room broadcasts — goals appear the
+ *  moment the feed sees them, no refresh. */
+function LiveScoreCard({ seed, onSimulate }: { seed: any; onSimulate: (matchNumber: number) => void }) {
+  const live = useLiveMatch(seed.matchNumber, seed);
+  if (!live) return null;
+  const lastGoal = live.events?.length ? live.events[live.events.length - 1] : null;
+  return (
+    <div className="flex flex-wrap items-center gap-3 rounded-2xl border border-danger/30 bg-danger/5 px-4 py-3">
+      <span className="inline-flex items-center gap-1.5 rounded-full bg-danger/15 px-2 py-0.5 text-[11px] font-bold text-danger">
+        <span className="live-dot inline-block h-1.5 w-1.5 rounded-full bg-danger" />
+        {live.finished ? 'FT · verifying' : live.phase === 'half_time' ? 'HT' : (live.minuteLabel ?? 'LIVE')}
+      </span>
+      <span className="flex items-center gap-2 font-bold">
+        <Flag code={live.homeCode} size={22} /> {live.homeCode}
+      </span>
+      <span className="font-mono text-2xl font-black tabular-nums">
+        {live.homeScore}–{live.awayScore}
+      </span>
+      <span className="flex items-center gap-2 font-bold">
+        {live.awayCode} <Flag code={live.awayCode} size={22} />
+      </span>
+      {live.homePenalties != null && (
+        <span className="font-mono text-xs text-muted">(pens {live.homePenalties}–{live.awayPenalties})</span>
+      )}
+      {lastGoal && (
+        <span className="text-xs text-muted">
+          ⚽ {lastGoal.minuteLabel} <b className="text-txt">{lastGoal.player ?? 'Goal'}</b> ({lastGoal.teamCode})
+        </span>
+      )}
+      <span className="ml-auto">
+        <Button variant="ghost" size="sm" onClick={() => onSimulate(live.matchNumber)}>
+          ⚡ Simulate M{live.matchNumber}
+        </Button>
+      </span>
+    </div>
+  );
+}
+
 function MatchSimulator({ initialMatch, initialPair }: { initialMatch: string | null; initialPair: string | null }) {
   const { user } = useAuth();
   const { show, node } = useToast();
   const { data: countries } = useApi<any[]>('/countries', { auth: false });
-  const { data: matches } = useApi<any[]>('/matches?stage=group', { auth: false });
+  const { data: matches } = useApi<any[]>('/matches', {
+    auth: false,
+    refreshOn: ['MATCH_PHASE', 'LIVE_SCORES_UPDATED'],
+  });
+  const { data: liveNow } = useApi<any[]>('/matches/live', {
+    auth: false,
+    refreshOn: ['MATCH_PHASE', 'LIVE_SCORES_UPDATED'],
+    refreshMs: 60_000,
+  });
 
   const [mode, setMode] = useState<'fixture' | 'custom'>(initialPair ? 'custom' : 'fixture');
   const [matchNumber, setMatchNumber] = useState<number>(initialMatch ? Number(initialMatch) : 1);
@@ -79,7 +126,22 @@ function MatchSimulator({ initialMatch, initialPair }: { initialMatch: string | 
   );
 
   return (
-    <div className="grid gap-4 lg:grid-cols-[320px_1fr]">
+    <div className="grid gap-4">
+      {liveNow && liveNow.length > 0 && (
+        <div className="grid gap-2">
+          {liveNow.map((lm) => (
+            <LiveScoreCard
+              key={lm.matchNumber}
+              seed={lm}
+              onSimulate={(n) => {
+                setMode('fixture');
+                setMatchNumber(n);
+              }}
+            />
+          ))}
+        </div>
+      )}
+      <div className="grid gap-4 lg:grid-cols-[320px_1fr]">
       <Card title="Setup">
         <div className="grid gap-3">
           <Tabs
@@ -94,7 +156,10 @@ function MatchSimulator({ initialMatch, initialPair }: { initialMatch: string | 
             <Select label="Match" value={matchNumber} onChange={(e) => setMatchNumber(Number(e.target.value))}>
               {scheduled.map((m) => (
                 <option key={m.matchNumber} value={m.matchNumber}>
-                  M{m.matchNumber} · {m.homeCode} vs {m.awayCode} ({m.localDate})
+                  M{m.matchNumber} · {m.homeCode} vs {m.awayCode}{' '}
+                  {m.live && !m.live.finished
+                    ? `· LIVE ${m.live.homeScore}–${m.live.awayScore}`
+                    : `(${m.localDate})`}
                 </option>
               ))}
             </Select>
@@ -140,10 +205,11 @@ function MatchSimulator({ initialMatch, initialPair }: { initialMatch: string | 
         {!result && !busy && (
           <Card>
             <p className="py-10 text-center text-sm text-muted">
-              Pick a fixture (today: Mexico–South Africa at the Azteca) or any hypothetical pairing, then hit simulate.
+              Pick a real fixture or any hypothetical pairing, then hit simulate.
             </p>
           </Card>
         )}
+      </div>
       </div>
       {node}
     </div>

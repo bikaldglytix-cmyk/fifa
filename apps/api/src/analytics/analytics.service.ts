@@ -32,10 +32,14 @@ export class AnalyticsService {
     return this.dbs.db;
   }
 
-  private async calibrationState(): Promise<{ eloDeltas: Record<string, EloEvent>; history: any[]; brierMean: number | null }> {
+  private async calibrationState(): Promise<{ eloEvents: EloEvent[]; history: any[]; brierMean: number | null }> {
     const [row] = await this.db.select().from(modelState).where(eq(modelState.id, 1));
     const cal = (row?.calibration as any) ?? {};
-    return { eloDeltas: cal.eloDeltas ?? {}, history: cal.history ?? [], brierMean: cal.brierMean ?? null };
+    // the ledger keys are the match numbers — lift them onto the events
+    const eloEvents: EloEvent[] = Object.entries(cal.eloDeltas ?? {})
+      .map(([matchNumber, ev]: [string, any]) => ({ matchNumber: Number(matchNumber), ...ev }))
+      .sort((a, b) => a.matchNumber - b.matchNumber);
+    return { eloEvents, history: cal.history ?? [], brierMean: cal.brierMean ?? null };
   }
 
   async overview() {
@@ -158,9 +162,8 @@ export class AnalyticsService {
     }
 
     // --- Elo: current + net tournament change from the delta ledger -----------------
-    const eloEvents: EloEvent[] = Object.values(cal.eloDeltas).sort((a, b) => a.matchNumber - b.matchNumber);
     const eloChange = new Map<string, number>();
-    for (const ev of eloEvents) {
+    for (const ev of cal.eloEvents) {
       eloChange.set(ev.home, (eloChange.get(ev.home) ?? 0) + ev.deltaHome);
       eloChange.set(ev.away, (eloChange.get(ev.away) ?? 0) + ev.deltaAway);
     }
@@ -222,7 +225,7 @@ export class AnalyticsService {
       scorelines,
       teams: teamRows,
       topScorers,
-      eloEvents,
+      eloEvents: cal.eloEvents,
       calibration: { brierMean: cal.brierMean, scored: cal.history.length, history: cal.history },
     };
   }
@@ -273,9 +276,7 @@ export class AnalyticsService {
       });
 
     // Elo series reconstructed backwards from the current rating + delta ledger
-    const events = Object.values(cal.eloDeltas)
-      .filter((ev) => ev.home === upper || ev.away === upper)
-      .sort((a, b) => a.matchNumber - b.matchNumber);
+    const events = cal.eloEvents.filter((ev) => ev.home === upper || ev.away === upper);
     const netChange = events.reduce((a, ev) => a + (ev.home === upper ? ev.deltaHome : ev.deltaAway), 0);
     let running = c.eloRating - netChange;
     const eloSeries = [{ label: 'start', elo: running }];

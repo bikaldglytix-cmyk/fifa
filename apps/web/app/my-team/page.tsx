@@ -7,6 +7,14 @@ import { useApi } from '../../lib/hooks';
 import { useAuth } from '../../lib/auth';
 import { Badge, Button, Card, Flag, Meter, Modal, Select, useToast } from '../../components/ui';
 import { PageSkeleton } from '../../components/intel';
+import { CHART, ChartLegend, HBars, Scatter } from '../../components/charts';
+
+const POSITION_COLOR: Record<string, string> = {
+  GK: CHART.gold,
+  DF: CHART.info,
+  MF: CHART.success,
+  FW: CHART.primary,
+};
 
 export default function MyTeamPage() {
   const { user, loading } = useAuth();
@@ -114,6 +122,21 @@ function LineupBuilder({ myTeam, onChanged }: { myTeam: any; onChanged: () => vo
 
   const assignedIds = new Set(Object.values(assignments));
   const complete = formation.slots.every((s) => assignments[s.id]);
+
+  // average rating of the assigned XI per natural position line
+  const lineStrength = useMemo(() => {
+    const assigned = Object.values(assignments)
+      .map((id) => byId.get(id))
+      .filter(Boolean) as any[];
+    return ['GK', 'DF', 'MF', 'FW']
+      .map((pos) => {
+        const ps = assigned.filter((p) => p.position === pos);
+        return ps.length
+          ? { label: `${pos} ×${ps.length}`, value: Math.round(ps.reduce((a, p) => a + (p.rating ?? 0), 0) / ps.length), color: POSITION_COLOR[pos] }
+          : null;
+      })
+      .filter(Boolean) as Array<{ label: string; value: number; color: string }>;
+  }, [assignments, byId]);
 
   const autoFill = async () => {
     const sug = await fetch(`/api/v1/fantasy/suggest/${myTeam.countryCode}?formation=${formationId}`).then((r) => r.json());
@@ -252,7 +275,27 @@ function LineupBuilder({ myTeam, onChanged }: { myTeam: any; onChanged: () => vo
             {analysis ? (
               <div className="grid gap-3">
                 <Meter label="Chemistry" value={analysis.chemistry.total} />
+                <HBars
+                  labelWidth="w-24"
+                  max={25}
+                  data={[
+                    { label: 'Club links', value: analysis.chemistry.clubLinks, suffix: `${analysis.chemistry.clubLinks}/25` },
+                    { label: 'League links', value: analysis.chemistry.leagueLinks, suffix: `${analysis.chemistry.leagueLinks}/15` },
+                    { label: 'Experience', value: analysis.chemistry.experienceBalance, suffix: `${analysis.chemistry.experienceBalance}/25` },
+                    { label: 'Age balance', value: analysis.chemistry.ageBalance, suffix: `${analysis.chemistry.ageBalance}/20` },
+                    { label: 'Captain', value: analysis.chemistry.captainBonus, suffix: `${analysis.chemistry.captainBonus}/15`, color: CHART.gold },
+                  ]}
+                />
                 <Meter label="Tactical fit" value={analysis.tacticalFit.total} />
+                <HBars
+                  labelWidth="w-24"
+                  max={60}
+                  data={[
+                    { label: 'In position', value: analysis.tacticalFit.positionFit, suffix: `${analysis.tacticalFit.positionFit}/60` },
+                    { label: 'Suits style', value: analysis.tacticalFit.styleFit, suffix: `${analysis.tacticalFit.styleFit}/25`, color: CHART.info },
+                    { label: 'Familiarity', value: analysis.tacticalFit.formationFamiliarity, suffix: `${analysis.tacticalFit.formationFamiliarity}/15`, color: CHART.info },
+                  ]}
+                />
                 {analysis.tacticalFit.warnings.length > 0 && (
                   <ul className="grid gap-1 rounded-lg bg-warning/10 p-2 text-[11px] text-warning">
                     {analysis.tacticalFit.warnings.slice(0, 4).map((w: string, i: number) => (
@@ -263,6 +306,12 @@ function LineupBuilder({ myTeam, onChanged }: { myTeam: any; onChanged: () => vo
               </div>
             ) : (
               <p className="py-2 text-center text-xs text-muted">Complete the XI and name a captain to see chemistry & tactical fit.</p>
+            )}
+            {lineStrength.length > 0 && (
+              <div className="mt-3 border-t border-line/60 pt-3">
+                <p className="mb-1.5 text-[10px] font-semibold uppercase tracking-wider text-muted">XI strength by line</p>
+                <HBars labelWidth="w-24" max={100} data={lineStrength} />
+              </div>
             )}
           </Card>
 
@@ -293,6 +342,25 @@ function LineupBuilder({ myTeam, onChanged }: { myTeam: any; onChanged: () => vo
           )}
         </div>
       </div>
+
+      <Card title="Squad insights — age vs rating (selected XI highlighted)">
+        <Scatter
+          xLabel="Age"
+          yLabel="Rating"
+          points={squad.map((p) => ({
+            x: p.age,
+            y: p.rating ?? 0,
+            label: `${p.name} (${p.position})${assignedIds.has(p.id) ? ' — in XI' : ''}`,
+            color: assignedIds.has(p.id) ? POSITION_COLOR[p.position] ?? CHART.primary : 'var(--color-line)',
+          }))}
+        />
+        <ChartLegend
+          items={[
+            ...['GK', 'DF', 'MF', 'FW'].map((pos) => ({ label: `${pos} (in XI)`, color: POSITION_COLOR[pos] })),
+            { label: 'Not selected', color: 'var(--color-line)' },
+          ]}
+        />
+      </Card>
 
       {/* player picker modal */}
       <Modal open={Boolean(pickerSlot)} onClose={() => setPickerSlot(null)} title={`Pick ${pickerSlot}`} wide>
@@ -325,6 +393,12 @@ function LineupBuilder({ myTeam, onChanged }: { myTeam: any; onChanged: () => vo
                     </span>
                     <Badge color={natural ? 'success' : 'warning'}>{p.position}</Badge>
                     <span className="w-16 text-right font-mono text-xs text-muted">{p.caps} caps</span>
+                    <span className="hidden h-2 w-20 overflow-hidden rounded-full bg-elevated sm:block">
+                      <span
+                        className="block h-full rounded-full"
+                        style={{ width: `${Math.round(p.rating ?? 0)}%`, background: POSITION_COLOR[p.position] ?? CHART.primary }}
+                      />
+                    </span>
                     <span className="w-10 text-right font-mono text-sm font-bold text-primary">{Math.round(p.rating ?? 0)}</span>
                   </button>
                 );
