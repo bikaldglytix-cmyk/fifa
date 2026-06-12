@@ -34,7 +34,8 @@
     "simulate": "node scripts/simulate-cli.mjs"
   },
   "dependencies": {
-    "@as-integrations/express5": "^1.1.2"
+    "@as-integrations/express5": "^1.1.2",
+    "lightningcss": "^1.32.0"
   },
   "devDependencies": {
     "esbuild": "^0.28.0",
