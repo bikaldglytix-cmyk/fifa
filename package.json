@@ -5,7 +5,7 @@
   "description": "FIFA 2026 World Cup Simulator & Fantasy Prediction League — full-stack TypeScript monorepo",
   "license": "MIT",
   "engines": {
-    "node": ">=20.10"
+    "node": ">=20.10 <23"
   },
   "workspaces": [
     "packages/shared",
@@ -35,7 +35,8 @@
   },
   "dependencies": {
     "@as-integrations/express5": "^1.1.2",
-    "lightningcss": "^1.32.0"
+    "lightningcss": "^1.32.0",
+    "rxjs": "^7.8.2"
   },
   "devDependencies": {
     "esbuild": "^0.28.0",
